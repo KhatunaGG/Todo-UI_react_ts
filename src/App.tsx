@@ -29,11 +29,14 @@ function App() {
   }
 
   const addTask = (): void => {
-    const newTask = { taskName: task, completed: false, id: Math.random() * 10 }
-    setTodoList([...todoList, newTask])
-    setTask('')
+    if (task.length !== 0) {
+      const newTask = { taskName: task, completed: false, id: Math.random() * 10 }
+      setTodoList([...todoList, newTask])
+      setTask('')
+    }
+
   }
- 
+
 
   const deleteTask = (id: number) => {
     setTodoList(todoList.filter((el) => el.id !== id))
