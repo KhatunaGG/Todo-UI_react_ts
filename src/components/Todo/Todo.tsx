@@ -21,8 +21,8 @@ interface Props {
   deleteTask: (id: number) => void;
   completTask: (id: number) => void;
   formattedTime: string;
-  formattedDay?: string; // You may need to adjust this based on your actual requirements
-  formattedDate?: number; // You may need to adjust this based on your actual requirements
+  formattedDay?: string; 
+  formattedDate?: number; 
 }
 
 const Todo: React.FC<Props> = ({
