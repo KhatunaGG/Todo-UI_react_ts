@@ -39,11 +39,11 @@ function App() {
 
 
   const deleteTask = (id: number) => {
-    setTodoList(todoList.filter((el) => el.id !== id))
+    setTodoList(todoList.filter((el :any) => el.id !== id))
   }
 
-  const completTask = (id) => {
-    setTodoList(todoList.map((task) => {
+  const completTask = (id : number) => {
+    setTodoList(todoList.map((task : any) => {
       if (task.id === id) {
         return { ...task, completed: true }
       } else {

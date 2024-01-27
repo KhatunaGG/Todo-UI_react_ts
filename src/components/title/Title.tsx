@@ -1,4 +1,3 @@
-import React from 'react'
 
 import {STitlewrapperDiv, STitleh1} from './titlestyled'
 

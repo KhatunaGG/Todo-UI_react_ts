@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 
 import {
@@ -7,16 +7,16 @@ import {
 
 
 
-const Item = ({task, deleteTask, completTask}) => {
+const Item = ({task, deleteTask, completTask} : any) => {
 
-    const publishedTimeRef = useRef();
-    useEffect(() => {
-    
-        if (!publishedTimeRef.current) {
-          const publishedTime = new Date().toLocaleString();
-          publishedTimeRef.current = publishedTime;
-        }
-      }, []);
+    const publishedTimeRef = useRef<string | undefined>();
+
+useEffect(() => {
+  if (!publishedTimeRef.current) {
+    const publishedTime = new Date().toLocaleString();
+    publishedTimeRef.current = publishedTime;
+  }
+}, []);
 
     return (
         <STasklist className="tasklist">

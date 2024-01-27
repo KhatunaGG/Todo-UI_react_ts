@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
 
 import {
     SFullDateDiv, SDaySpan, STimeSpan, SdayInnerDiv, STimewrapper
 } from './datestyled'
 
-const Date = ({ formattedTime, formattedDay, formattedDate }) => {
+const Date = ({ formattedTime, formattedDay, formattedDate }: any) => {
 
     return (
         <SFullDateDiv>
